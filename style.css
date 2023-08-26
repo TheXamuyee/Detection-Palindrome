@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+outline: none;
+border: none;
+}
+
+body {
+min-height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #f7f7f7;
+color: #000;
+font-family: "Courier New", Courier, monospace;
+user-select: none;
+}
+
+.container {
+width: 500px;
+border-radius: 2rem;
+background: rgb(246, 246, 246, 0.15);
+box-shadow: rgb(0, 0, 0, 0.2) 0px 3px 8px, inset rgba(255, 255, 255) 1px 10px;
+padding: 2rem;
+text-align: center;
+}
+
+.inputdiv {
+position: relative;
+margin: 1rem 0;
+display: flex;
+}
+
+.inputdiv input {
+flex: 1;
+padding: 0.5rem;
+border-radius: 1rem 0 0 1rem;
+transition: 0.3s ease;
+background: #eee;
+}
+
+.inputdiv input:is(:focus,:hover,:active){
+background: #ddd;
+}
+
+.inputdiv .btn {
+background: #444;
+color: #fff;
+padding: 0.5rem 1.5rem;
+cursor: pointer;
+border-radius: 0 1rem 1rem 0;
+transition: 0.2s ease;
+}
+
+.inputdiv .btn:hover{
+background: #222;
+}
+
+.res{
+display: none;
+}
+
+.res.show{
+display: block;
+}
+
+h2 {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container {
+        width: 300px;
+    }
+    .inputdiv {
+        right: 0.6rem;
+    }
+    .inputdiv .btn {
+        font-size: 0.8rem;
+    }
+    input#text {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .container {
+        width: 270px;
+    }
+    .inputdiv {
+        right: 1.4rem;
+    }
+}
